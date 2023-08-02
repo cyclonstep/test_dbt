@@ -11,9 +11,14 @@
 
 with source_data as (
 
-    select 1 as id
+    select 1 as id,
+    'beef' as meat_name
     union all
-    select 2 as id
+    select 2 as id,
+    'chicken' as meat_name
+    union all
+    select 3 as id,
+    'pork' as meat_name
 
 )
 
