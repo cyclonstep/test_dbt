@@ -1,7 +1,7 @@
 {% macro ci_set_warehouse() %}
 
     {{ (log("target_name: " ~ target_name, info=True)) }}
-    {{ set target_warehouse = 'QA_WH'}}
+    {% set target_warehouse = 'QA_WH' %} 
 
     {%- if target.name == 'ci' -%}
         {{ (log("Change Snowflake warehouse to: " ~ target_warehouse, info=True)) }}
